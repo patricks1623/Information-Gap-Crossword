@@ -13,6 +13,11 @@ async function startServer() {
 
   io.on("connection", (socket) => {
     socket.on("join-room", (room) => {
+      socket.rooms.forEach(r => {
+        if (r !== socket.id) {
+          socket.leave(r);
+        }
+      });
       socket.join(room.toString());
     });
     socket.on("new-round", ({ room, newRoom }) => {

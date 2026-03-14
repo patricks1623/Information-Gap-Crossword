@@ -264,6 +264,7 @@ export default function App() {
 
   useEffect(() => {
     const handleRedirect = (newRoom: number) => {
+      if (room === newRoom) return;
       setRoom(newRoom);
       setTime(0);
       setUserInputs({});
@@ -389,7 +390,7 @@ export default function App() {
 
   const handleNewRound = () => {
     if (window.confirm('Start a new round? This will change the room code and reset the game for both players.')) {
-      const newRoom = Math.floor(Math.random() * 10000);
+      const newRoom = ((room + 12345) * 16807) % 2147483647 % 100000;
       socket.emit('new-round', { room: room.toString(), newRoom });
       setRoom(newRoom);
       setTime(0);
