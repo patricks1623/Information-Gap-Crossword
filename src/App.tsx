@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Share2, RefreshCw, Clock, CheckCircle2, Play, Sun, Moon, X } from 'lucide-react';
+import { Share2, RefreshCw, Clock, CheckCircle2, Play, Sun, Moon, X, Puzzle } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { io } from 'socket.io-client';
@@ -416,7 +416,7 @@ export default function App() {
         </div>
         <div className="max-w-md w-full bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-8 text-center border border-slate-100 dark:border-slate-800 transition-colors">
           <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <Share2 size={32} />
+            <Puzzle size={32} />
           </div>
           <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100 mb-2">Information Gap Crossword</h1>
           <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
