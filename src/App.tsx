@@ -719,7 +719,7 @@ function CrosswordGrid({ board, role, userInputs, setUserInputs, partnerInputs, 
             {cell.isFilledForRole ? (
               <div className={cn(
                 "w-full h-full flex items-center justify-center font-bold text-xs sm:text-base rounded-sm shadow-sm border transition-colors relative",
-                isSolvedByPartner ? "bg-slate-200 dark:bg-slate-700 border-emerald-400 dark:border-emerald-500 text-slate-800 dark:text-slate-200 z-10" : "bg-slate-200 dark:bg-slate-700 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-200"
+                isSolvedByPartner ? "bg-slate-200 dark:bg-slate-700 border-2 border-emerald-400 dark:border-emerald-500 text-slate-800 dark:text-slate-200 z-10" : "bg-slate-200 dark:bg-slate-700 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-200"
               )}>
                 {cell.letter}
                 {showPartnerTyping && (
@@ -776,7 +776,7 @@ function CluesPanel({ board, role, partnerSolvedWords }: { board: any, role: 'A'
             return (
               <div key={pw.number} className={cn(
                 "p-4 rounded-xl border shadow-sm transition-colors relative",
-                isSolved ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-400 dark:border-emerald-500 z-10" : "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700"
+                isSolved ? "bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-400 dark:border-emerald-500 z-10" : "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700"
               )}>
                 <div className="flex items-center gap-2 mb-3">
                   <span className={cn(
